@@ -23,7 +23,7 @@ export const getRenderContainer = (editor: Editor, nodeType: string) => {
   const node = view.domAtPos(from).node as HTMLElement
   let container = node
 
-  if (!container.tagName) {
+  if (!container.tagName && node.parentElement) {
     container = node.parentElement
   }
 
@@ -32,7 +32,9 @@ export const getRenderContainer = (editor: Editor, nodeType: string) => {
     !(container.getAttribute('data-type') && container.getAttribute('data-type') === nodeType) &&
     !container.classList.contains(nodeType)
   ) {
-    container = container.parentElement
+    if (container.parentElement) {
+      container = container.parentElement
+    }
   }
 
   return container
