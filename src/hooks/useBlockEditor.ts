@@ -8,7 +8,7 @@ import { TiptapCollabProvider, WebSocketStatus } from '@hocuspocus/provider'
 import type { Doc as YDoc } from 'yjs'
 
 import { ExtensionKit } from '@/extensions/extension-kit'
-import { EditorContext } from '../context/EditorContext'
+// import { EditorContext } from '../context/EditorContext'
 import { userColors, userNames } from '../lib/constants'
 import { randomElement } from '../lib/utils'
 import { EditorUser } from '../components/BlockEditor/types'
