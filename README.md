@@ -1,4 +1,8 @@
-# Next BlockEditor App
+# Next BlockEditor App (without AI features)
+
+This is a modified version of Tiptap's React Block Editor template with all AI features removed, so it can be used without access to the paid Content AI suite. Note that you will still need to set up Tiptap Pro extensions (which are free) with ```.npmrc```---you can find instructions for that [here](https://cloud.tiptap.dev/pro-extensions). 
+
+Original README below.
 
 ## Installation & Usage
 

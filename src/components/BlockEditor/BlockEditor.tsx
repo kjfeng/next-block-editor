@@ -12,11 +12,9 @@ import '@/styles/index.css'
 
 import { Sidebar } from '@/components/Sidebar'
 import { Loader } from '@/components/ui/Loader'
-import { EditorContext } from '@/context/EditorContext'
 import ImageBlockMenu from '@/extensions/ImageBlock/components/ImageBlockMenu'
 import { ColumnsMenu } from '@/extensions/MultiColumn/menus'
 import { TableColumnMenu, TableRowMenu } from '@/extensions/Table/menus'
-// import { useAIState } from '@/hooks/useAIState'
 import { createPortal } from 'react-dom'
 import { TiptapProps } from './types'
 import { EditorHeader } from './components/EditorHeader'
@@ -30,15 +28,6 @@ export const BlockEditor = ({ ydoc, provider }: TiptapProps) => {
   const { editor, users, characterCount, collabState, leftSidebar } = useBlockEditor({ ydoc, provider })
 
   const displayedUsers = users.slice(0, 3)
-
-  // const providerValue = useMemo(() => {
-  //   return {
-  //     isAiLoading: aiState.isAiLoading,
-  //     aiError: aiState.aiError,
-  //     setIsAiLoading: aiState.setIsAiLoading,
-  //     setAiError: aiState.setAiError,
-  //   }
-  // }, [aiState])
 
   if (!editor) {
     return null
